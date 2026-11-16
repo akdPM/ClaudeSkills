@@ -1,6 +1,6 @@
 ---
 name: design-reference-research
-description: Research real design references before designing or redesigning any screen, then turn them into concrete directions. Use this whenever the user asks for design references, inspiration, a moodboard, "what do good ones look like", a visual direction or theme, or is about to design or revamp a dashboard, CMS or builder screen, a landing page, a portfolio or case-study page, a mobile app screen, or a component such as a hero, pricing section, navbar, footer, empty state or onboarding flow. Also use it when the user says a design feels flat, generic, dead or "not like a SaaS", because the fix starts with looking at references. Use it even if the user does not say the word "reference".
+description: "Research real design references before designing or redesigning any screen, then turn them into concrete directions. Use this whenever the user asks for design references, inspiration, a moodboard, \"what do good ones look like\", a visual direction or theme, or is about to design or revamp a dashboard, CMS or builder screen, a landing page, a portfolio or case-study page, a mobile app screen, or a component such as a hero, pricing section, navbar, footer, empty state or onboarding flow. Also use it when the user says a design feels flat, generic, dead or \"not like a SaaS\", because the fix starts with looking at references. Use it even if the user does not say the word \"reference\"."
 ---
 
 # Design reference research
