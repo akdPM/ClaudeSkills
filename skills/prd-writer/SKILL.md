@@ -1,45 +1,69 @@
 ---
 name: prd-writer
-description: "Write or review a product requirements document in one of two formats: a short one-page PRD for quick alignment, or a detailed PRD covering every feature, state and edge case for hand-over. Includes the sections an AI feature needs: model behaviour, evals, guardrails, cost and fallback. Use whenever the user asks for a PRD, spec, product brief, one-pager, requirements, feature write-up, PR/FAQ or pitch, wants an existing PRD reviewed or tightened, or needs an idea turned into something engineers can build from."
+description: "Write or review product requirements documents. Default for the owner: a detailed PRD per module, in plain language anyone can follow, with screens, user flows and a sitemap, and all AI behaviour in a separate AI PRD that module PRDs reference by ID. Also writes a short one-page PRD or PR/FAQ on request. Use whenever the user asks for a PRD, spec, product brief, one-pager, requirements, feature write-up, PR/FAQ or pitch, wants an existing PRD reviewed or tightened, or needs an idea turned into something engineers can build from."
 ---
 
 # PRD writer
 
-A PRD exists so that the people building something share one understanding of the problem, what will be built, and how they will know it worked. Its length should match the decision it supports.
+A PRD exists so that everyone building something shares one understanding of the problem, what will be built, and how they will know it worked.
+
+## Read first
+
+**Always read `references/my-preferences.md` first.** It records how the owner wants PRDs written and overrides everything below where they differ. In short: detailed, one PRD per module, plain language, screens and flows in every module, a sitemap, and AI in its own document with cross-references.
 
 ## Pick the format
 
-Ask which one the user wants if they have not said.
+| Format | Use it when | Read |
+|---|---|---|
+| **Module PRD set** (default) | A product with several areas, or anything handed over to build | `references/module-prd.md`, then `references/ai-prd.md` if any part uses a model |
+| **Detailed PRD** | One self-contained feature | `references/detailed-prd.md` |
+| **Short PRD or PR/FAQ** | Only when the owner asks for a quick one-pager | `references/short-prd.md` |
 
-| Format | Use it when | Length | Read |
-|---|---|---|---|
-| **Short PRD** | Getting agreement to start, a small feature, an early idea, a first pass before a detailed one | One page | `references/short-prd.md` |
-| **Detailed PRD** | Handing over to build, a complex feature, anything with many states or edge cases, work others will estimate and test from | As long as the feature needs | `references/detailed-prd.md` |
+For a new product, write in this order:
+1. The overview PRD.
+2. The sitemap.
+3. The module PRDs, most important first.
+4. The AI PRD, which grows as modules reference capabilities.
 
-For a large initiative, write the short one first, get agreement, then expand it. A detailed PRD written before the problem is agreed is wasted.
-
-**If any part of the feature uses a model, also read `references/ai-sections.md`.** An AI feature without evals in its PRD is not specified, because nobody can say when it is good enough.
+**If any part uses a model, the AI PRD is required, and `references/ai-sections.md` lists what each capability must cover.** An AI feature without evals is not specified, because nobody can say when it is good enough.
 
 ## How to write it
 
-1. **Start from the problem, not the solution.** If the problem, the person and the evidence are not clear, stop and run `product-sense-check` first, or ask.
-2. **Gather before drafting.** Read whatever the user has: notes, research, designs, earlier specs. Ask only for what is missing and cannot be inferred.
-3. **Write requirements someone can test.** "Fast" is not a requirement. "Draft appears within 60 seconds for a 10-page upload" is.
-4. **State what is out of scope**, with the reason. This prevents more arguments than any other section.
-5. **Mark every guess.** Label assumptions and open questions plainly so nobody builds on them unknowingly.
-6. **Use real examples** of inputs, outputs and screens wherever possible.
+1. **Start from the problem, not the solution.** If the problem, the person and the evidence aren't clear, stop and run `product-sense-check` first, or ask.
+2. **Gather before drafting.** Read the research, designs (design canvas boards), notes and earlier specs. Ask only for what is missing.
+3. **Write in plain language.** Someone who has never seen the product should understand every sentence. Keep sentences short, use everyday words, explain each term the first time, and give real examples.
+4. **Give everything an ID and reference it.** Requirements, screens, flows, edge cases, events and AI capabilities each get an ID. Say where every input comes from.
+5. **Show screens and flows.** Embed or link each screen by its design name. Draw a user flow for each main journey, and keep a product sitemap.
+6. **Make requirements testable.** Use Given / When / Then. "Fast" is not a requirement; "the draft appears within 60 seconds for a 10-page upload" is.
+7. **State what is out of scope**, with the reason.
+8. **Mark every guess** as "Assumption" or "Open question" with an owner.
 
 ## Reviewing a PRD
 
-When asked to review, check: is the problem evidenced; is there one clear success measure; can each requirement be tested; are states and edge cases covered; is out-of-scope explicit; for AI, are evals, fallback and cost present. Report gaps in priority order, then offer `product-council` at the PRD stage.
+Check, in this order:
+1. Is the problem evidenced?
+2. Is there one clear success measure?
+3. Can every requirement be tested?
+4. Are states and edge cases covered?
+5. Is out-of-scope explicit?
+6. Are screens and flows present and current with the design?
+7. Do all cross-references resolve?
+8. For AI: are evals, fallback and cost present in the AI PRD?
+9. Is the language plain?
+
+Report the gaps in priority order, then offer `product-council` at the PRD stage.
+
+## Keeping it current
+
+When designs or decisions change, update the PRD sections that reference them and add a line to the decision log. A stale PRD is worse than none.
 
 ## Personalising
 
-The user will supply their own PRD examples and preferences. When they do, follow their structure and wording over the templates here, and note the differences in `references/my-preferences.md` so later PRDs match.
+When the owner shares PRD examples or corrects a PRD, record the difference in `references/my-preferences.md`.
 
 ## Ask before starting
 
-The user decides when this skill runs. When a task fits, ask one short question first ("Shall I use the prd-writer skill for this?") and start only after a yes. If the user named the skill, that is the yes.
+The owner decides when this skill runs. When a task fits, ask one short question first ("Shall I use the prd-writer skill for this?") and start only after a yes. If the owner named the skill, that is the yes.
 
 ## Who this is for
 
