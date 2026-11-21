@@ -1,16 +1,17 @@
-# Module PRD (detailed, one per module)
+# One full PRD, written module by module
 
-Use this when a product is large enough to split into modules. Each module gets its own document, built from this template. Product-level material (vision, sitemap, AI) lives in separate documents and is referenced, never copied.
+The whole product lives in ONE PRD. Product-level parts come first, then one part per module, then the AI part, then the glossary, questions and decisions. Nothing is copied between parts; parts reference each other by ID.
 
-## The document set
+## The parts of the one PRD
 
-| Document | Written | Holds |
-|---|---|---|
-| Overview PRD | Once | Vision, verticals, who it is for, module list, how modules connect, success measures for the whole product |
-| Sitemap | Once, updated as modules change | Every page and screen, grouped by area, with the module that owns it |
-| Module PRDs | One per module | Everything about that module except AI behaviour |
-| AI PRD | Once (`ai-prd.md`) | Every AI capability, by ID, plus the AI architecture and guardrails |
-| Glossary | Once | Every product word (for example "Work", "Knowledge Base", "credit") in plain language |
+| Part | Holds |
+|---|---|
+| A. Product | Vision, product family, problem and evidence, who it is for, goals and measures, scope |
+| B. Sitemap | Every page and screen, grouped the way users see them, drawn as a tree, with the owning module |
+| C. How it is built | Technical approach, architecture, repos and domains |
+| D. Modules | One part per module, using the template below. Group modules the way users think (creating and editing a Work are one module) |
+| E. AI | Every AI capability, by ID, plus the AI architecture and guardrails (`ai-prd.md`) |
+| F. Glossary, open questions, decision log | Every product word in plain language; questions with owners; decisions with dates |
 
 ## IDs (so everything can be referenced)
 
@@ -19,12 +20,11 @@ Use this when a product is large enough to split into modules. Each module gets 
 - AI capabilities: `AI-01`, defined only in the AI PRD.
 - Screens also carry their design name, for example `WK-S03 · D8DocEditor`.
 
-## Template
+## Template for each module part
 
 ```
-# <Module name> PRD
-Module code · Owner · Date · Status · Version
-Links: design canvas page · Overview PRD · Sitemap · AI PRD
+## <Module name> (<code>)
+Links: design canvas boards · Sitemap entries · AI capabilities used
 
 ## 1. In one paragraph
 What this module lets people do, for whom, and why it matters. Plain words.
@@ -77,7 +77,7 @@ What is stored, for how long, who can see it, how it is exported and deleted.
 Events (WK-A01…) with properties, and the question each one answers.
 
 ## 15. AI used by this module
-A list of AI capability IDs with one line each and a link to the AI PRD. No AI detail here.
+A list of AI capability IDs with one line each and a link to the AI part. No AI detail here.
 
 ## 16. Accessibility and phone
 Keyboard use, screen readers, contrast, behaviour at phone width.
@@ -97,7 +97,7 @@ What was decided, when and why.
 
 ## Rules
 
-- Write for someone who has never seen the product. Plain words, short sentences, a term explained the first time it appears.
+- Write so a four-year-old could follow it: very short sentences, common words, one idea per sentence, no jargon.
 - Every requirement says why, so it survives scope cuts.
 - Never describe the same thing in two places: reference it by ID.
 - Keep screens in step with the design canvas. When a screen changes, update sections 7–11.

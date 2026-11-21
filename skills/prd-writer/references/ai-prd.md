@@ -1,12 +1,12 @@
-# AI PRD (one per product)
+# The AI part of the PRD
 
-Every AI capability in the product is defined here once and given an ID. Module PRDs refer to these IDs and never repeat the detail. Read `ai-sections.md` for what each capability must cover.
+This is a part of the one PRD, not a separate document. Every AI capability is defined here once and given an ID. Module parts refer to these IDs and never repeat the detail. Read `ai-sections.md` for what each capability must cover.
 
 ## Template
 
 ```
-# <Product> AI PRD
-Owner · Date · Status · Version · Links: Overview PRD · module PRDs · eval reports
+## E. AI
+Links: module parts · eval reports
 
 ## 1. In one paragraph
 What AI does in this product, what it must never do, and the promise we make to users (for example "nothing invented; every claim has a source").
