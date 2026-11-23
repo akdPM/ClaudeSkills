@@ -18,6 +18,8 @@ These override the templates wherever they differ. Last updated 21 Nov 2026 from
 ## Product-level parts (in the same PRD, before the modules)
 - Vision and the product family.
 - Problem and evidence.
+- **Who it is for, defined properly:** personas backed by research, and full user stories per persona with acceptance criteria.
+- **Research mapping:** customer research lives in its own document; the PRD links each decision to it.
 - Goals and measures.
 - **Sitemap**: every page, grouped the way users see them, with the module that owns each page. Draw it as a clear tree.
 - Technical approach and architecture, written with engineering.
@@ -37,6 +39,10 @@ These override the templates wherever they differ. Last updated 21 Nov 2026 from
 ## Decisions the owner has made (follow them)
 - Front end and back end are **separate**, in separate deployables, so a front-end failure never harms the back end.
 - The marketing site and the app are separate: the marketing site at deltafolio.co, the app at app.deltafolio.co.
+
+## Order of work
+- Roadmap and designs come first. The technical PRD (architecture, AI agents and their harness) comes after the designs are final.
+- Every Work step names where AI is used and what checks and balances apply.
 
 ## When designs change
 When the owner changes a screen on the design canvas, update the PRD parts that reference it: screens, flows, requirements and states.

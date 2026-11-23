@@ -6,7 +6,9 @@ The whole product lives in ONE PRD. Product-level parts come first, then one par
 
 | Part | Holds |
 |---|---|
-| A. Product | Vision, product family, problem and evidence, who it is for, goals and measures, scope |
+| A. Product | Vision, product family, problem and evidence, goals and measures, scope |
+| A2. Users | Personas (who, situation, goal, pain, what they use today, what makes them pay, what stops them), each backed by research quotes; user stories per persona ("As a <persona>, I want <goal>, so that <reason>") with acceptance criteria; jobs to be done |
+| A3. Research | A short map of the research behind each decision, linking the customer research document |
 | B. Sitemap | Every page and screen, grouped the way users see them, drawn as a tree, with the owning module |
 | C. How it is built | Technical approach, architecture, repos and domains |
 | D. Modules | One part per module, using the template below. Group modules the way users think (creating and editing a Work are one module) |
