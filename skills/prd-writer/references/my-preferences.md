@@ -46,3 +46,8 @@ These override the templates wherever they differ. Last updated 21 Nov 2026 from
 
 ## When designs change
 When the owner changes a screen on the design canvas, update the PRD parts that reference it: screens, flows, requirements and states.
+
+## When a product changes direction
+- Keep the old PRD as a record. Write a new PRD for the new direction; never overwrite the old plan.
+- In the old PRD, add a first section explaining the decision ("Why I killed …"), in first person, backed by data with sources: user feedback, research numbers, simple unit math, and how the decision was made. End it with what I'd do differently and what was kept. It doubles as a portfolio case study.
+- Add the full roadmap to the old PRD, with each item's status and what happens to it in the new direction (kept or cut).
